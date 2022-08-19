@@ -24,8 +24,9 @@ export default {
 }
 </script>
 <style scoped>
-/* .home{
-  background-image: url('../assets/img/fondo2.jpg')
-} */
+.home{
+  
+}
+
 </style>
 

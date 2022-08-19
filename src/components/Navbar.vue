@@ -112,4 +112,16 @@ export default {
     border-radius: 50%;
     margin: 0 auto;
 }
+@media only screen  and (max-width: 767px){
+  .navbar-brand img{
+    width: 140px;
+  height: 37px;
+  }
+}
+@media only screen  and (max-width: 340px){
+  .navbar-brand img{
+    width: 110px;
+  height: 27px;
+  }
+}
 </style>
