@@ -9,16 +9,16 @@
       <b-collapse id="nav-collapse" is-nav class=" justify-content-center ">   
         <b-navbar-nav  class="navbar-nav " >
           <b-nav-item  >
-          <router-link to="/" class="nav-link " >MOVIES</router-link>  
+          <router-link to="#" class="nav-link " >MOVIES</router-link>  
           </b-nav-item>
           <b-nav-item >
-            <router-link to="/Productos" class="nav-link">CELEBS & PHOTOS</router-link>  
+            <router-link to="#" class="nav-link">CELEBS & PHOTOS</router-link>  
           </b-nav-item>
           <b-nav-item >
-            <router-link to="/Productos" class="nav-link">COMMUNITY</router-link>  
+            <router-link to="#" class="nav-link">COMMUNITY</router-link>  
           </b-nav-item>
           <b-nav-item >
-            <router-link to="/Productos" class="nav-link">NEWS</router-link>  
+            <router-link to="#" class="nav-link">NEWS</router-link>  
           </b-nav-item>
           </b-navbar-nav>
       </b-collapse>
@@ -98,11 +98,11 @@ export default {
     color: chartreuse;
   }
   /*lo que voy a utilizar*/
-  .navbar .nav-link:hover {
+  /* navbar .nav-link:hover {
     
     padding-bottom: 0px ;
     border-bottom: 2px solid #6ab23c;
-  }
+  } */
 
 .box{
     width: 50px;

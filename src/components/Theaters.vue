@@ -30,6 +30,9 @@
         <b-card-text class="description">
           {{card.description}}
         </b-card-text>   
+        <b-card-text class="puntuation">
+          {{card.puntuation}}
+        </b-card-text> 
       </b-card>
       </b-col>
     </b-row>
@@ -47,43 +50,32 @@ export default {
                 image: require("@/assets/img/fondo1.jpg"),
                 title: 'MAD MAX',
                 description: 'Descubre de que se trata nuestra tecnologia ambiental',
-                
+                puntuation: 4.8,
                 },
                 {
                 image: require("@/assets/img/fondo1.jpg"),
                 title: 'THE HUNGER GAMES',
                 description: 'Descubre de que se trata nuestra tecnologia ambiental',
-                button: 'Conoce más'
+                puntuation: 4.1,
                 },
                  {
                 image: require("@/assets/img/fondo1.jpg"),
                 title: 'Innovamos para mejorar',
                 description: 'Mil formas de innovar para crear habitos y ayudar a nuestro ambiente',
-                button: 'Conoce más'
+                puntuation: 4.1,
                 },
-                {
-                image: require("@/assets/img/fondo1.jpg"),
-                title: 'Deja tu comentario',
-                description: 'Brindanos tu opinión y forma parte del cambio',
-                button: 'Conoce más'
-                } ,
-                {
-                image: require("@/assets/img/fondo1.jpg"),
-                title: 'Deja tu comentario',
-                description: 'Brindanos tu opinión y forma parte del cambio',
-                button: 'Conoce más'
-                } 
             ]
         }
     },
     mounted () {
     axios
-      .get('https://www.themoviedb.org/discover/movie?sort_by=popularity.desc')
+      .get('api.themoviedb.org/3/authentication/session/new?api_key=Qw3rty*')
       .then(function (response) {
         console.log(response)
         })
       
     }
+    /* "request_token": "6bc047b88f669d1fb86574f06381005d93d3517a" */
 }
 </script>
 
@@ -98,7 +90,7 @@ export default {
     margin-top: -60px;
     padding: 29px 9px 29px 60px;
     border-radius: 30px 30px 0px 0px;
-    color: rgb(0, 0, 0);
+    color: rgb(213, 70, 70);
 }
 .margen{
   margin-left: 14%;
@@ -167,7 +159,12 @@ export default {
 	color: #fff;
 }
 @media only screen  and (min-width: 1200px) and (max-width: 1290px){}
-@media only screen  and (min-width: 768px) and (max-width: 992px){}
+@media only screen  and (min-width: 768px) and (max-width: 992px){
+  .navbar_small{
+  width: 100%;
+  margin-left: 0%;
+}
+}
 @media only screen  and (max-width: 767px){
   .slide{
   width: 40%;

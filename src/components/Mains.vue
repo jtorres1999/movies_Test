@@ -174,7 +174,7 @@ export default {
     font-size: 9px;
 }
 .fondo{
-  min-height: 35vh;
+  min-height: 31vh;
 }
 }
 @media only screen  and (max-width: 380px){
