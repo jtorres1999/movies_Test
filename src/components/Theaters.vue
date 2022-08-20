@@ -16,35 +16,26 @@
       <b-icon icon="grid3x3-gap-fill"  font-scale="1" ></b-icon>
       <input type="range" class="slide"> 6.5
     </div>
-    <b-row class="navbar_small">
-      <b-col cols="12" md="4" class="card_margen mt-5" v-for="(card, index) in cards" :key="index">
-        <b-card 
-          :img-src="card.image"
-          :title="card.title"
-        img-alt="Image"
-        img-top
-        tag="article"
-        style="max-width: 20rem;"
-        class="mb-2 title"
-      >
-        <b-card-text class="description">
-          {{card.description}}
-        </b-card-text>   
-        <b-card-text class="puntuation">
-          {{card.puntuation}}
-        </b-card-text> 
-      </b-card>
-      </b-col>
-    </b-row>
+    
+    <main id="main"></main>
+    <div class="pagination">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import obtener from '../obtener'
+import cards from '../assets/style/cards.css'
 export default {
+    
     data() {
         return {
-            info: [],
+            info: [], 
             cards: [
               {
                 image: require("@/assets/img/fondo1.jpg"),
@@ -69,17 +60,18 @@ export default {
     },
     mounted () {
     axios
-      .get('api.themoviedb.org/3/authentication/session/new?api_key=Qw3rty*')
+      .get('')
       .then(function (response) {
         console.log(response)
         })
       
     }
-    /* "request_token": "6bc047b88f669d1fb86574f06381005d93d3517a" */
+   
 }
 </script>
 
 <style scoped>
+
 .navbar_small{
   width: 1140px;
   margin-left: 10%;
@@ -111,53 +103,13 @@ export default {
   position:relative;
   width: 100%;
 }
-.card_margen{
-      display: flex;
-}
-.description{
-  font-weight: bold;
-  color: rgb(231, 231, 98);
-  font-size: 13px;
-}
-.title{
-  font-weight: bold;
+.nav-tabs .nav-link{
   color: rgb(0, 0, 0);
-  font-size: 13px;
-  text-align: left;
 }
-.card{
-	width: 90%;
-	margin: 20px;
-	border-radius: 6px;
-	overflow: hidden;
-	background:#fff;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-	transition: all 400ms ease-out;
-	cursor: pointer;
+.nav-tabs .nav-link:hover{
+  color: rgb(240, 240, 17);
 }
-.card:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
-}
-.card img{
-	width: 100%;
-	height: 210px;
-}
-.card .contenido-card a{
-	display: inline-block;
-	padding: 10px;
-	margin-top: 10px;
-	text-decoration: none;
-	color: #2fb4cc;
-	border: 1px solid #2fb4cc;
-	border-radius: 4px;
-	transition: all 400ms ease;
-	margin-bottom: 5px;
-}
-.card .contenido-card a:hover{
-	background: #2fb4cc;
-	color: #fff;
-}
+
 @media only screen  and (min-width: 1200px) and (max-width: 1290px){}
 @media only screen  and (min-width: 768px) and (max-width: 992px){
   .navbar_small{
@@ -185,6 +137,12 @@ export default {
   width: 100%;
   margin-left: 0%;
 }
+.overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
 }
 @media only screen  and (max-width: 380px){
 .navs{
